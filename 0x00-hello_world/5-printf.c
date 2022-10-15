@@ -1,8 +1,11 @@
-#include<stdio.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
 /**
- *main- entry point
+ * main - entry point
  *
- * Return:if no errors return 0 else return value
+ * Return: If no errors return 0 else return to value
  */
 int main(void)
 {
