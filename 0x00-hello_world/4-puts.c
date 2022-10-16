@@ -2,10 +2,10 @@
 /**
  * main- Entry point
  *
- * return: if no errors return 0 else return value
+ * Return: By default returns zero if no errors else returns non-zero value.
  */
 int main(void)
 {
 	puts("\" Programming is like building a multilingual puzzle");
-	return(0)
+	return (0);
 }
