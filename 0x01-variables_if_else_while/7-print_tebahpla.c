@@ -4,6 +4,7 @@
  * main - print the alphabets in reverse view type
  * Return: Always 0 (Success)
  */
+
 int main(void)
 {
 	char le;
