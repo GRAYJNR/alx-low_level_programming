@@ -1,8 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+
 /**
- * main - print the alphabets in reverse view type
+ * main - printi the alphabets in reverse view type
  * Return: Always 0 (Success)
  */
 
