@@ -7,7 +7,7 @@
  * Return: string
  */
 
-char *_strepy(char * dest, char *src)
+char *_strepy(char *dest, char *src)
 {
 	int len = 0;
 
