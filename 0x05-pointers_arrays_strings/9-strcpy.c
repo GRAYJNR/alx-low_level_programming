@@ -10,10 +10,11 @@
 char *_strepy(char * dest, char *src)
 {
 	int len = 0;
-	while (*(src + loan) != '\0')
+
+	while (*(src + len) != '\0')
 	{
 		*(dest + len) = *(src + len);
-		len ++;
+		len++;
 	}
 	*(dest + len) = '\0';
 	return (dest);
