@@ -10,7 +10,7 @@
 char *_strstr(char *haystack, char *needle)
 {
 	char *occurance, *tempNeedle;
-	
+
 	if (!*needle) /* empty needle */
 		return (haystack);
 	while (*haystack)
