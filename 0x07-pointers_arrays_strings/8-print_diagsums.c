@@ -11,6 +11,7 @@
 void print_diagsums(int *a, int size)
 {
 	int primC, sum1, sum2, diagC1, diagC2, row;
+	
 	primC = 0, sum1 = 0, sum2 = 0, diagC1 = 0, diagC2 = 0, row = 0;
 
 	while (primC < size * size)
