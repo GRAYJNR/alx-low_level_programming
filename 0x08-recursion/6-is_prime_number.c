@@ -2,15 +2,15 @@
 #include <stdio.h>
 
 /**
-* is_prime_number - checks if n is a prime number
-* @n: int to check if it is prime or not
+* is_prime_number - returns if a number is prime
+* @n: number to determine primeness of
 *
 * Return: 1 if prime, 0 otherwise
 */
 
 int is_prime_number(int n)
 {
-	if (n <= 1) /* edge case */
+	if (n < 2)
 		return (0);
-	return (is_prime_number(n, _sqrt_recursion(n)));
+	return (is_prime_number(n, 2));
 }
