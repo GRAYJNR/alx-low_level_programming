@@ -2,15 +2,31 @@
 #include <stdio.h>
 
 /**
-* _sqrt_recursion - finds square root of n, recursively
-* @n: int to find sqroot from
-* 
-* Return: sqroot, -1 if no natural sqroot for n
+* check_sqrt - get if a number is sqrt of another
+* @x: number to reach
+* @y: number to check
+*
+* Return: sqrt of x, -1 otherwise
 */
 
-int _sqrt_recursion(int n)
+int check_sqrt(int x, int y)
 {
-	if (n <= 0) /* error case */
+	if (y * y > x)
 		return (-1);
-	return (_sqrt_recursion(1, n));
+	if (y * y == x)
+		return (y);
+	return (check_sqrt(x, y + 1));
+}
+/**
+* _sqrt_recursion - gets natural square root of a number, if any
+* @x: number to get square root of
+*
+* Return: natural square root of number, -1 otherwise
+*/
+
+int _sqrt_recursion(int x)
+{
+	if (x < 0)
+		return (-1);
+	return (check_sqrt(x, 0));
 }
