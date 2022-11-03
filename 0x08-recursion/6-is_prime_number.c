@@ -12,5 +12,5 @@ int is_prime_number(int n)
 {
 	if (n <= 1) /* edge case */
 		return (0);
-	return (prime_checker(n, _sqrt_recursion(n)));
+	return (is_prime_number(n, _sqrt_recursion(n)));
 }
