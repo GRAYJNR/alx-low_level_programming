@@ -25,7 +25,7 @@ int main(int argc, char **argv)
 		cents -= 25;
 	}
 	while (cents >= 10)
-	{	coinss++;
+	{	coins++;
 		cents -= 10;
 	}
 	if (cents >= 5)
