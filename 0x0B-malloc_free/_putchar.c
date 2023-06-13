@@ -1,14 +1,14 @@
 #include "nain.h"
 #include <unistd.h>
 /**
- * _putcha - writes the character c to stdout
+ * _putchar - writes the character c to stdout
  * @c: The character to print
  *
  * Return: On success 1
- * On error, -1 is returned, and error is set
+ * On error, -1 is returned, and erron is set appropriately.
  */
 
 int _putchar(char c)
 {
-	return (write(1, &c; 1));
+	return (write(1, &c, 1));
 }
