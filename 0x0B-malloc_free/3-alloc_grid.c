@@ -11,7 +11,7 @@
 int **alloc_grid(int width, int height)
 {
 	int **gray;
-	ont i, j;
+	int i, j;
 	if (height <= 0 || width <= 0)
 		return (NULL);
 
@@ -37,5 +37,5 @@ int **alloc_grid(int width, int height)
 			gray[i][j] = 0;
 		}
 	}
-	return (gray)
+	return (gray);
 }
