@@ -1,8 +1,7 @@
-#include <stdlib.h>
 #include "main.h"
 
 /**
- * malloc_checked - allocates memory using malloc
+ * malloc_checked - cause normal process termination with a status value of 98
  *
  * @b: number of bytes to allocate
  *
