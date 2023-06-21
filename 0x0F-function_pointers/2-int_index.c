@@ -1,5 +1,4 @@
 #include "function_pointers.h"
-#include <stdlib.h>
 
 /**
 * int_index -this  gets the index of an array element
@@ -7,9 +6,8 @@
 * @size: this represents size of array (num of elements)
 * @cmp: this is the comparison function to determine if element found
 *
-* Return: this is an integer representing index of element found in array
+* Return: this is an integer that represents index of element 
 */
-
 int int_index(int *array, int size, int (*cmp)(int))
 {
 	int j = 0;
