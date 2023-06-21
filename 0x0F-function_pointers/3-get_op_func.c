@@ -10,14 +10,11 @@
 
 int (*get_op_func(char *s))(int, int)
 {
-	op_t key[] = {{"+", op_add}, {"-", op_sub}, {"*", op_mul}, {"/", op_div}, {"%", op_mod} };
-	int i = 0;
+	op_t ops[] = {{"+", op_add}, {"-", op_sub}, {"*", op_mul}, {"/", op_div}, {"%", op_mod}, {NULL, NULL}};
+	int j = 0;
 
-	while (i < 5)
-	{
-		if (*key[i].op == *s)
-			return (key[i].f);
-		i++;
-	}
-	return (NULL);
+	while (ops[j].op != NULL && *(ops[j].op) != *s)
+		j++;
+
+	return (ops[j].f);
 }

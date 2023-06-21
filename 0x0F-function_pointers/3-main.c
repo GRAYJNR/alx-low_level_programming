@@ -1,38 +1,45 @@
+#include "function_pointers.h"
 #include "3-calc.h"
 #include <stdio.h>
 #include <stdlib.h>
 
 /**
-* main - calculates two numbers given a string
-* @ac: number of arguments
-* @av: array of argument strings
+* main - this calculates two numbers given a string
+* @ac: represents number of arguments
+* @av: this represents array of argument strings
 *
-* Return: 0 on success.
+* Return: 0 on success always.
 */
 
-int main(int ac, char *av[])
+int main(int __attribute__((__unused__)) argc, char *argv[])
 {
-	int a, b;
-	int (*f)(int, int);
-	
-	if (ac != 4)
+	int num1, num2;
+	char *op;
+
+	if (argc != 4)
 	{
 		printf("Error\n");
-		return (98);
+		exit(98);
 	}
-	a = atoi(av[1]);
-	b = atoi(av[3]);
-	f = get_op_func(av[2]);
-	if (f == NULL || av[2][1] != 0)
+
+	num1 = atoi(argv[1]);
+	op = argv[2];
+	num2 = atoi(argv[3]);
+
+	if (get_op_func(op) == NULL || op[1] != '\0')
 	{
 		printf("Error\n");
-		return (99);
+		exit(99);
 	}
-	if ((av[2][0] == '/' || av[2][0] == '%') && b == 0)
+
+	if ((*op == '/' && num2 == 0) ||
+	    (*op == '%' && num2 == 0))
 	{
 		printf("Error\n");
-		return (100);
+		exit(100);
 	}
-	printf("%d\n", f(a, b));
+
+	printf("%d\n", get_op_func(op)(num1, num2));
+
 	return (0);
 }
